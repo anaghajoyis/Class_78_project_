@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>My family book!</title>
+        <style>
+            body{
+                background-color: blueviolet;
+                color: floralwhite;
+                text-shadow: forestgreen;
+            }
+        </style>
+    </head>
+    <body>
+        <center style="margin-top: 40px;">
+            <h1>
+                My Family Book
+            </h1>
+            <p>Family is a very important element in one's life and consists of parents, grandparents, children, uncles, aunts, cousins etc. A family cares, teaches and is always there when one needs them. They give unconditional love and makes the person feel good about themself (well, most of the times anyways). Family members always mean good for each other. <br> Given below are my family members!</p>
+            
+            <img src="1621140490476.png" id="family_member_image" width="250px" height="300px">
+            <h4 id="family_member_name"></h4>
+            <button onclick="update();">Next</button>
+          
+        </center>
+        <script>
+            var images = ["1621140490476.png","Screenshot_20210629-135922_01_01.png", "Screenshot_20210810-170537_01.png" , "1621088544496.png", "1621080867960.png", "WIN_20210727_17_40_09_Pro.jpg"];
+            var names = ["My Family Book","Grand father - Krishna Rao", "Grand mother - Ishwari Rao", "Mom - Ashwini Jois", "Dad - Ramesh Jois", "And of course, me - Anagha Jois"];
+            var i = 0;
+            function update(){
+            i++;
+            var numbers_of_family_member_in_array = 5;
+            if(i > numbers_of_family_member_in_array){
+            i = 0;
+            }
+            var updatedImage = images[i];
+            var updatedName = names [i];
+ 
+            document.getElementById("family_member_image").src = updatedImage;
+            document.getElementById("family_member_name").innerHTML = updatedName;
+            }
+        </script>
+    </body>
+</html>
